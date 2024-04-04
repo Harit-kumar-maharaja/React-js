@@ -29,21 +29,22 @@ function App() {
     <div
       className="w-full h-full flex flex-wrap justify-center items-center bg-cover bg-no-repeat "
       style={{
-        backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROGg0UDrT8_7YuzN3fCr09Y_UwoerxW5ZuEw&s')`,
+        backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh5h8zAxQEmbBsImJTPmFfTuqr4hpeFsejA&s`,
       }}
     >
       
       <div className="w-full">
-        <div className="w-full max-w-lg mx-auto border border-gray-60 rounded-lg p-8 backdrop-blur-sm bg-white/30">
+        <div className="w-full max-w-lg mx-auto border border-gray-60 rounded-lg p-8 backdrop-blur-sm bg-balck">
           <form
             onSubmit={(e) => {
               e.preventDefault();
               convert()
             }}
           >
-            <div className="w-full mb-1">
+            <div className="w-full mb-1 border border-balck text-black" style={{backgroundColor: '#2563EB'}}>
               <InputBox 
-                label="From"
+              className='border border-black'
+                label=" From : "
                 amount={amount}
                 currencyoption={options}
                 oncurrencychange={(currency) => setamount(amount)}
@@ -51,22 +52,22 @@ function App() {
                 selectcurrency={from}
               />
             </div>
-            <div className="relative w-full h-0.5">
+            <div className="relative w-full h-0.5 ">
               <button
                 type="button"
-                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md  text-white px-2 py-0.5" style={{backgroundColor: '#2563EB'}}
                 onClick={swap}
               >
-                swap
+                Swap
               </button>
             </div>
-            <div className="w-full mt-1 mb-4">
+            <div className="w-full mt-1 mb-4 text-black ">
               <InputBox
-                label="to"
+                label="To : "
                 amount={convertedamount}
                 currencyoption={options}
                 oncurrencychange={(currency) => setto(currency)}
-                selectcurrency={from}
+                selectcurrency={to}
                 amountdisable
               />
             </div>
@@ -81,3 +82,6 @@ function App() {
 }
 
 export default App
+
+
+
