@@ -27,7 +27,7 @@ function App() {
       pass += str.charAt(char)
     }
 
-    setpassword(pass)
+    setpassword(pass) 
 
   } , [length , numberallowed , charallowed , setpassword])
 
